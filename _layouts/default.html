@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jackson Wu's Personal Site">
+  <meta name="author" content="Jackson Wu">
+  
+  <title>{{ page.title }}</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  {% if jekyll.environment == "production" %}
+  <link rel="icon" href="{{ '/static/favicon.ico' | prepend: site.github.url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/static/css/style.css' | prepend: site.github.url }}">
+  {% else %}
+  <link rel="icon" href="{{ '/static/favicon.ico' | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/static/css/style.css' | prepend: site.baseurl }}">
+  {% endif %}
+</head>
+
+<body>
+  <header role="banner">
+    <nav class="navbar navbar-static-top" role="navigation">
+      <div class="container">
+        <span>
+          <a href="/" {% if page.url == '/' %} class="js-fix active-home" {% endif %}>Home</a>
+        </span>
+        |
+        <span>
+          <a href="/projects/" {% if page.url == '/projects/' %} class="js-fix active-projects" {% endif %}>Projects</a>
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    {{ content }}
+  </main>
+  
+</body>
+</html>
