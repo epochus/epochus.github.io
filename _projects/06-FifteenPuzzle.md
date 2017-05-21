@@ -1,6 +1,6 @@
 ---
 title: "Fifteen Puzzle Solver"
-link: https://en.wikipedia.org/wiki/15_puzzle
+link: https://fifteen-puzzle-solver.herokuapp.com/
 tags:
     - name: JavaScript
     - name: HTML5
